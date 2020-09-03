@@ -1,0 +1,375 @@
+/*helping selectors*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: Roboto-Black;
+  src: url(../fonts/Roboto/Roboto-Black.ttf); }
+
+@font-face {
+  font-family: Roboto-BlackItalic;
+  src: url(../fonts/Roboto/Roboto-BlackItalic.ttf); }
+
+@font-face {
+  font-family: Roboto-Bold;
+  src: url(../fonts/Roboto/Roboto-Bold.ttf); }
+
+@font-face {
+  font-family: Roboto-BoldItalic;
+  src: url(../fonts/Roboto/Roboto-BoldItalic.ttf); }
+
+@font-face {
+  font-family: Roboto-Italic;
+  src: url(../fonts/Roboto/Roboto-Italic.ttf); }
+
+@font-face {
+  font-family: Roboto-Light;
+  src: url(../fonts/Roboto/Roboto-Light.ttf); }
+
+@font-face {
+  font-family: Roboto-LightItalic;
+  src: url(../fonts/Roboto/Roboto-LightItalic.ttf); }
+
+@font-face {
+  font-family: Roboto-Medium;
+  src: url(../fonts/Roboto/Roboto-Medium.ttf); }
+
+@font-face {
+  font-family: Roboto-MediumItalic;
+  src: url(../fonts/Roboto/Roboto-MediumItalic.ttf); }
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(../fonts/Roboto/Roboto-Regular.ttf); }
+
+@font-face {
+  font-family: Roboto-Thin;
+  src: url(../fonts/Roboto/Roboto-Thin.ttf); }
+
+@font-face {
+  font-family: Roboto-ThinItalic;
+  src: url(../fonts/Roboto/Roboto-ThinItalic.ttf); }
+
+.container {
+  width: 1440px; }
+
+.header {
+  background: #FFFFFF; }
+  .header-helper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .header-helper-logoBlock {
+      display: inline-block;
+      background: #b90000;
+      padding: 24px 80px 10px;
+      margin-bottom: 60px; }
+      .header-helper-logoBlock-logo {
+        font-family: Roboto-Bold;
+        font-size: 40px;
+        line-height: 50px;
+        color: #FFFFFF;
+        text-transform: uppercase; }
+    .header-helper-nav-navList {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+      .header-helper-nav-navList-item {
+        padding: 0 40px;
+        list-style-type: none; }
+        .header-helper-nav-navList-item-link {
+          text-decoration: none;
+          font-family: Roboto-Light;
+          font-size: 20px;
+          line-height: 24px;
+          color: #0e0e0e;
+          cursor: pointer; }
+          .header-helper-nav-navList-item-link:hover {
+            padding: 0 0 5px;
+            border-bottom: 1px solid #b90000; }
+    .header-helper-nav-langList {
+      display: flex;
+      position: absolute;
+      top: 146px;
+      right: 40px;
+      flex-direction: row;
+      margin-bottom: 60px; }
+      .header-helper-nav-langList-item {
+        padding: 0 6px;
+        list-style-type: none; }
+        .header-helper-nav-langList-item-link {
+          text-decoration: none;
+          text-transform: uppercase;
+          font-family: Roboto-Light;
+          font-size: 14px;
+          line-height: 18px;
+          color: #0e0e0e;
+          cursor: pointer; }
+          .header-helper-nav-langList-item-link:hover {
+            color: #b90000; }
+      .header-helper-nav-langList .lgActive .header-helper-nav-langList-item-link {
+        color: #b90000; }
+      .header-helper-nav-langList-line {
+        height: 20px;
+        border-right: 1px solid #b90000; }
+    .header-helper-burger {
+      display: none; }
+
+.navDown {
+  background: #b90000;
+  margin-bottom: 0; }
+  .navDown .header-helper {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    flex-direction: row;
+    background: #b90000;
+    top: 0;
+    z-index: 1000; }
+    .navDown .header-helper-logoBlock {
+      background: #b90000;
+      padding: 10px 80px;
+      margin-bottom: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0; }
+      .navDown .header-helper-logoBlock-logo {
+        font-size: 32px;
+        line-height: 40px;
+        color: #FFFFFF; }
+    .navDown .header-helper-nav {
+      display: flex;
+      flex-direction: revert;
+      align-items: baseline; }
+      .navDown .header-helper-nav-navList {
+        margin-bottom: 0; }
+        .navDown .header-helper-nav-navList-item {
+          padding: 0 10px; }
+          .navDown .header-helper-nav-navList-item-link {
+            font-size: 18px;
+            line-height: 20px;
+            color: #FFFFFF; }
+            .navDown .header-helper-nav-navList-item-link:hover {
+              padding: 0 0 5px;
+              border-bottom: 1px solid #FFFFFF; }
+      .navDown .header-helper-nav-langList {
+        position: initial;
+        flex-direction: row;
+        margin-bottom: 0;
+        padding: 0 20px; }
+        .navDown .header-helper-nav-langList-item {
+          padding: 0 4px; }
+          .navDown .header-helper-nav-langList-item-link {
+            font-size: 14px;
+            line-height: 18px;
+            color: #FFFFFF; }
+            .navDown .header-helper-nav-langList-item-link:hover {
+              padding: 0 0 5px;
+              border-bottom: 1px solid #FFFFFF; }
+        .navDown .header-helper-nav-langList-line {
+          border-right: 1px solid #FFFFFF; }
+
+.navDown + .hero {
+  padding: 248px 0 0; }
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0 0;
+  margin-bottom: 20px; }
+  .hero-title {
+    margin-bottom: 40px;
+    font-family: Roboto-Regular;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    color: #b90000;
+    text-transform: uppercase; }
+  .hero-text {
+    width: 800px;
+    margin-bottom: 20px;
+    font-family: Roboto-Regular;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #0e0e0e; }
+
+.main-location {
+  padding: 80px 0 0;
+  margin-bottom: 20px; }
+  .main-location-title {
+    margin-bottom: 40px;
+    font-family: Roboto-Regular;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    color: #b90000;
+    text-transform: uppercase; }
+  .main-location-container {
+    display: flex; }
+    .main-location-container-map {
+      width: 1000px;
+      height: 500px;
+      background-image: url(../img/map.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    .main-location-container-info-list {
+      display: flex;
+      flex-direction: column; }
+      .main-location-container-info-list-item {
+        display: flex;
+        flex-direction: row; }
+        .main-location-container-info-list-item-metro {
+          margin: 0 30px 20px;
+          padding: 6px;
+          border: 3px solid #b90000;
+          border-radius: 50%;
+          font-family: Roboto-Light;
+          font-size: 36px;
+          line-height: 36px;
+          text-align: center;
+          color: #b90000;
+          text-transform: uppercase; }
+
+.main-specialOffer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0 0;
+  margin-bottom: 100px; }
+  .main-specialOffer-title {
+    margin-bottom: 40px;
+    font-family: Roboto-Regular;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    color: #b90000;
+    text-transform: uppercase; }
+  .main-specialOffer-img {
+    height: 250px;
+    margin-bottom: 40px; }
+  .main-specialOffer-text {
+    width: 800px;
+    margin-bottom: 20px;
+    font-family: Roboto-Regular;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #0e0e0e; }
+
+.footer {
+  background: #b90000;
+  padding: 60px 80px 80px; }
+  .footer-helper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100vw - 160px);
+    flex-direction: row; }
+    .footer-helper-logoBlock {
+      display: inline-block; }
+      .footer-helper-logoBlock-logo {
+        font-family: Roboto-Bold;
+        font-size: 40px;
+        line-height: 50px;
+        color: #FFFFFF;
+        text-transform: uppercase; }
+    .footer-helper-content {
+      display: flex;
+      flex-direction: row; }
+      .footer-helper-content-links-navList {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        .footer-helper-content-links-navList-item {
+          padding: 0 40px;
+          list-style-type: none;
+          margin-bottom: 14px; }
+          .footer-helper-content-links-navList-item-link {
+            text-decoration: none;
+            font-family: Roboto-Light;
+            font-size: 16px;
+            line-height: 20px;
+            color: #FFFFFF;
+            cursor: pointer; }
+            .footer-helper-content-links-navList-item-link:hover {
+              padding: 0 0 5px;
+              border-bottom: 1px solid #FFFFFF; }
+      .footer-helper-content-contacts-contactsList {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        .footer-helper-content-contacts-contactsList-item {
+          padding: 0 40px;
+          list-style-type: none;
+          margin-bottom: 14px;
+          font-family: Roboto-Light;
+          font-size: 16px;
+          line-height: 20px;
+          color: #FFFFFF; }
+          .footer-helper-content-contacts-contactsList-item-link {
+            text-decoration: none;
+            font-family: Roboto-Light;
+            font-size: 16px;
+            line-height: 20px;
+            color: #FFFFFF;
+            cursor: pointer; }
+            .footer-helper-content-contacts-contactsList-item-link:hover {
+              padding: 0 0 5px;
+              border-bottom: 1px solid #FFFFFF; }
+          .footer-helper-content-contacts-contactsList-item-socialNetwork {
+            margin-right: 10px;
+            cursor: pointer; }
+            .footer-helper-content-contacts-contactsList-item-socialNetwork svg {
+              display: inline-block;
+              width: 30px;
+              height: 30px; }
+              .footer-helper-content-contacts-contactsList-item-socialNetwork svg g path {
+                fill: #FFFFFF; }
+              .footer-helper-content-contacts-contactsList-item-socialNetwork svg g .st0 {
+                fill: #FFFFFF; }
+              .footer-helper-content-contacts-contactsList-item-socialNetwork svg g .st1 {
+                fill: #b90000; }

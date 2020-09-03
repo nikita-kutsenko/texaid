@@ -1,0 +1,96 @@
+$C-WHITE: #FFFFFF;
+$C-RED: #b90000;
+$C-BLACK: #0e0e0e;
+
+
+.main {
+
+    &-location {
+        padding: 80px 0 0;
+        margin-bottom: 20px;
+
+        &-title {
+            margin-bottom: 40px;
+            font-family: Roboto-Regular;
+            font-size: 36px;
+            line-height: 40px;
+            text-align: center;
+            color: $C-RED;
+            text-transform: uppercase;
+        }
+
+        &-container {
+            display: flex;
+
+            &-map {
+                width: 1000px;
+                height: 500px;
+                background-image: url(../img/map.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            &-info {
+
+                &-list {
+                    display: flex;
+                    flex-direction: column;
+
+                    &-item {
+                        display: flex;
+                        flex-direction: row;
+
+                        &-metro {
+                            margin: 0 30px 20px;
+                            padding: 6px;
+                            border: 3px solid $C-RED;
+                            border-radius: 50%;
+                            font-family: Roboto-Light;
+                            font-size: 36px;
+                            line-height: 36px;
+                            text-align: center;
+                            color: $C-RED;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-specialOffer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 80px 0 0;
+        margin-bottom: 100px;
+
+        &-title {
+            margin-bottom: 40px;
+            font-family: Roboto-Regular;
+            font-size: 36px;
+            line-height: 40px;
+            text-align: center;
+            color: $C-RED;
+            text-transform: uppercase;
+        }
+
+        &-img {
+            height: 250px;
+            margin-bottom: 40px;
+        }
+    
+        &-text {
+            width: 800px;
+            margin-bottom: 20px;
+            font-family: Roboto-Regular;
+            font-size: 24px;
+            line-height: 28px;
+            text-align: center;
+            color: $C-BLACK;
+        }
+    }
+
+    
+}

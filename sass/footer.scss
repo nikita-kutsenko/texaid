@@ -1,0 +1,120 @@
+$C-WHITE: #FFFFFF;
+$C-RED: #b90000;
+$C-BLACK: #0e0e0e;
+
+
+.footer {
+    background: $C-RED;
+    padding: 60px 80px 80px;
+
+    &-helper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: calc(100vw - 160px);
+        flex-direction: row;
+
+        &-logoBlock {
+            display: inline-block;
+
+            &-logo {
+                font-family: Roboto-Bold;
+                font-size: 40px;
+                line-height: 50px;
+                color: $C-WHITE;
+                text-transform: uppercase;
+            }
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: row;
+            &-links {
+
+                &-navList {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+    
+                    &-item {
+                        padding: 0 40px;
+                        list-style-type: none;
+                        margin-bottom: 14px;
+    
+                        &-link {
+                            text-decoration: none;
+                            font-family: Roboto-Light;
+                            font-size: 16px;
+                            line-height: 20px;
+                            color: $C-WHITE;
+                            cursor: pointer;
+    
+                            &:hover {
+                                padding: 0 0 5px;
+                                border-bottom: 1px solid $C-WHITE;
+                            }
+                        }
+                    }
+                }
+            }
+            &-contacts {
+
+                &-contactsList {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+    
+                    &-item {
+                        padding: 0 40px;
+                        list-style-type: none;
+                        margin-bottom: 14px;
+                        font-family: Roboto-Light;
+                        font-size: 16px;
+                        line-height: 20px;
+                        color: $C-WHITE;
+    
+                        &-link {
+                            text-decoration: none;
+                            font-family: Roboto-Light;
+                            font-size: 16px;
+                            line-height: 20px;
+                            color: $C-WHITE;
+                            cursor: pointer;
+    
+                            &:hover {
+                                padding: 0 0 5px;
+                                border-bottom: 1px solid $C-WHITE;
+                            }
+
+                            
+                        }
+                        &-socialNetwork {
+                            margin-right: 10px;
+                            cursor: pointer;
+
+                            svg {
+                                display: inline-block;
+                                width: 30px;
+                                height: 30px;
+
+                                g {
+                                    path {
+                                        fill: $C-WHITE;
+                                    }
+
+                                    .st0 {
+                                        fill: $C-WHITE;
+                                    }
+
+                                    .st1 {
+                                        fill: $C-RED;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
