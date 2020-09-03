@@ -26,6 +26,7 @@ $C-BLACK: #0e0e0e;
                 line-height: 50px;
                 color: $C-WHITE;
                 text-transform: uppercase;
+                cursor: default;
             }
         }
         
@@ -180,6 +181,14 @@ $C-BLACK: #0e0e0e;
                     }
                 }
 
+                .lgActive {
+                    .header-helper-nav-langList-item-link {
+                        padding: 0 0 5px;
+                        color: $C-WHITE;
+                        border-bottom: 1px solid $C-WHITE;
+                    }
+                }
+
                 &-line {
                     border-right: 1px solid $C-WHITE;
                 }
@@ -191,6 +200,11 @@ $C-BLACK: #0e0e0e;
 .navDown + .hero {
     padding: 248px 0 0;
 }
+
+// // mobile 
+// @media only screen and (min-width: 320px) and (max-width: 1023px) {
+    
+// }
 
 
 // .header-helper-burger {

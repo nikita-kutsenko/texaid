@@ -43,6 +43,86 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@keyframes location1Anim {
+  0% {
+    top: 228px;
+    left: -679px; }
+  100% {
+    top: 214px;
+    left: -679px; } }
+
+@keyframes location2Anim {
+  0% {
+    top: 66px;
+    left: -137px; }
+  100% {
+    top: 52px;
+    left: -137px; } }
+
+@keyframes location3Anim {
+  0% {
+    top: -60px;
+    left: -934px; }
+  100% {
+    top: -74px;
+    left: -934px; } }
+
+@keyframes location4Anim {
+  0% {
+    top: 36px;
+    left: -79px; }
+  100% {
+    top: 22px;
+    left: -79px; } }
+
+@keyframes location5Anim {
+  0% {
+    top: -155px;
+    left: -920px; }
+  100% {
+    top: -169px;
+    left: -920px; } }
+
+@keyframes location1Anim_tablet {
+  0% {
+    top: 158px;
+    left: -495px; }
+  100% {
+    top: 144px;
+    left: -495px; } }
+
+@keyframes location2Anim_tablet {
+  0% {
+    top: 40px;
+    left: -102px; }
+  100% {
+    top: 26px;
+    left: -102px; } }
+
+@keyframes location3Anim_tablet {
+  0% {
+    top: -53px;
+    left: -681px; }
+  100% {
+    top: -67px;
+    left: -681px; } }
+
+@keyframes location4Anim_tablet {
+  0% {
+    top: 20px;
+    left: -62px; }
+  100% {
+    top: 6px;
+    left: -62px; } }
+
+@keyframes location5Anim_tablet {
+  0% {
+    top: -121px;
+    left: -671px; }
+  100% {
+    top: -135px;
+    left: -671px; } }
+
 @font-face {
   font-family: Roboto-Black;
   src: url(../fonts/Roboto/Roboto-Black.ttf); }
@@ -92,7 +172,12 @@ table {
   src: url(../fonts/Roboto/Roboto-ThinItalic.ttf); }
 
 .container {
-  width: 1440px; }
+  max-width: 1440px;
+  margin: 0 auto; }
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .container {
+    max-width: 1024px; } }
 
 .header {
   background: #FFFFFF; }
@@ -110,7 +195,8 @@ table {
         font-size: 40px;
         line-height: 50px;
         color: #FFFFFF;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        cursor: default; }
     .header-helper-nav-navList {
       display: flex;
       flex-direction: row;
@@ -207,6 +293,10 @@ table {
             .navDown .header-helper-nav-langList-item-link:hover {
               padding: 0 0 5px;
               border-bottom: 1px solid #FFFFFF; }
+        .navDown .header-helper-nav-langList .lgActive .header-helper-nav-langList-item-link {
+          padding: 0 0 5px;
+          color: #FFFFFF;
+          border-bottom: 1px solid #FFFFFF; }
         .navDown .header-helper-nav-langList-line {
           border-right: 1px solid #FFFFFF; }
 
@@ -226,7 +316,8 @@ table {
     line-height: 40px;
     text-align: center;
     color: #b90000;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    cursor: default; }
   .hero-text {
     width: 800px;
     margin-bottom: 20px;
@@ -234,7 +325,13 @@ table {
     font-size: 24px;
     line-height: 28px;
     text-align: center;
-    color: #0e0e0e; }
+    color: #0e0e0e;
+    cursor: default; }
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .hero-text {
+    font-size: 22px;
+    line-height: 26px; } }
 
 .main-location {
   padding: 80px 0 0;
@@ -246,12 +343,13 @@ table {
     line-height: 40px;
     text-align: center;
     color: #b90000;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    cursor: default; }
   .main-location-container {
     display: flex; }
     .main-location-container-map {
       width: 1000px;
-      height: 500px;
+      height: 600px;
       background-image: url(../img/map.png);
       background-position: center;
       background-repeat: no-repeat;
@@ -261,18 +359,97 @@ table {
       flex-direction: column; }
       .main-location-container-info-list-item {
         display: flex;
-        flex-direction: row; }
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        background-color: #f5f5f5;
+        border-bottom: 2px solid #FFFFFF;
+        box-sizing: border-box;
+        height: 120px;
+        width: 440px; }
         .main-location-container-info-list-item-metro {
-          margin: 0 30px 20px;
-          padding: 6px;
-          border: 3px solid #b90000;
-          border-radius: 50%;
+          margin: 0 30px 0 20px;
+          width: 50px;
+          height: 50px; }
+        .main-location-container-info-list-item-text-metro {
+          margin-bottom: 4px;
+          text-decoration: none;
           font-family: Roboto-Light;
-          font-size: 36px;
-          line-height: 36px;
-          text-align: center;
+          font-size: 18px;
+          line-height: 22px;
+          color: #0e0e0e;
+          cursor: default; }
+        .main-location-container-info-list-item-text-address {
+          margin-bottom: 10px;
+          max-width: 316px;
+          text-decoration: none;
+          font-family: Roboto-Light;
+          font-size: 18px;
+          line-height: 22px;
+          color: #0e0e0e;
+          cursor: default; }
+        .main-location-container-info-list-item-text-googleMaps {
+          text-decoration: none;
+          font-family: Roboto-Light;
+          font-size: 16px;
+          line-height: 20px;
           color: #b90000;
-          text-transform: uppercase; }
+          cursor: pointer; }
+        .main-location-container-info-list-item .item-withoutMetro {
+          margin-left: 100px; }
+        .main-location-container-info-list-item:before {
+          position: absolute;
+          display: block;
+          content: ' ';
+          background-image: url("../img/marker.svg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          height: 28px;
+          width: 28px;
+          z-index: 200; }
+      .main-location-container-info-list .location1:before {
+        top: 228px;
+        left: -679px;
+        z-index: 201; }
+      .main-location-container-info-list .location1:hover {
+        background-color: #e5e5e5; }
+        .main-location-container-info-list .location1:hover:before {
+          animation: 0.7s linear 0s infinite alternate location1Anim; }
+      .main-location-container-info-list .location2:before {
+        top: 66px;
+        left: -137px;
+        z-index: 202; }
+      .main-location-container-info-list .location2:hover {
+        background-color: #e5e5e5; }
+        .main-location-container-info-list .location2:hover:before {
+          animation: 0.7s linear 0s infinite alternate location2Anim; }
+      .main-location-container-info-list .location3:before {
+        top: -60px;
+        left: -934px;
+        z-index: 203; }
+      .main-location-container-info-list .location3:hover {
+        background-color: #e5e5e5; }
+        .main-location-container-info-list .location3:hover:before {
+          animation: 0.7s linear 0s infinite alternate location3Anim; }
+      .main-location-container-info-list .location4:before {
+        top: 36px;
+        left: -79px;
+        z-index: 204; }
+      .main-location-container-info-list .location4:hover {
+        background-color: #e5e5e5; }
+        .main-location-container-info-list .location4:hover:before {
+          animation: 0.7s linear 0s infinite alternate location4Anim; }
+      .main-location-container-info-list .location5:before {
+        top: -155px;
+        left: -920px;
+        z-index: 205; }
+      .main-location-container-info-list .location5:hover {
+        background-color: #e5e5e5; }
+        .main-location-container-info-list .location5:hover:before {
+          animation: 0.7s linear 0s infinite alternate location5Anim; }
+      .main-location-container-info-list .list-lastItem {
+        border-bottom: 0; }
 
 .main-specialOffer {
   display: flex;
@@ -287,7 +464,8 @@ table {
     line-height: 40px;
     text-align: center;
     color: #b90000;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    cursor: default; }
   .main-specialOffer-img {
     height: 250px;
     margin-bottom: 40px; }
@@ -298,7 +476,72 @@ table {
     font-size: 24px;
     line-height: 28px;
     text-align: center;
-    color: #0e0e0e; }
+    color: #0e0e0e;
+    cursor: default; }
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .main-location-container-map {
+    width: 724px;
+    height: 430px; }
+  .main-location-container-info-list-item {
+    width: 300px;
+    height: 86px; }
+    .main-location-container-info-list-item-metro {
+      margin: 0 20px;
+      width: 40px;
+      height: 40px; }
+    .main-location-container-info-list-item-text-metro {
+      margin-bottom: 2px;
+      font-size: 14px;
+      line-height: 16px; }
+    .main-location-container-info-list-item-text-address {
+      margin-bottom: 4px;
+      max-width: 204px;
+      font-size: 14px;
+      line-height: 16px; }
+    .main-location-container-info-list-item-text-googleMaps {
+      font-size: 14px;
+      line-height: 16px; }
+    .main-location-container-info-list-item .item-withoutMetro {
+      margin-left: 80px; }
+  .main-location-container-info-list .location1:before {
+    top: 158px;
+    left: -495px; }
+  .main-location-container-info-list .location1:hover {
+    background-color: #e5e5e5; }
+    .main-location-container-info-list .location1:hover:before {
+      animation: 0.7s linear 0s infinite alternate location1Anim_tablet; }
+  .main-location-container-info-list .location2:before {
+    top: 40px;
+    left: -102px; }
+  .main-location-container-info-list .location2:hover {
+    background-color: #e5e5e5; }
+    .main-location-container-info-list .location2:hover:before {
+      animation: 0.7s linear 0s infinite alternate location2Anim_tablet; }
+  .main-location-container-info-list .location3:before {
+    top: -53px;
+    left: -681px; }
+  .main-location-container-info-list .location3:hover {
+    background-color: #e5e5e5; }
+    .main-location-container-info-list .location3:hover:before {
+      animation: 0.7s linear 0s infinite alternate location3Anim_tablet; }
+  .main-location-container-info-list .location4:before {
+    top: 20px;
+    left: -62px; }
+  .main-location-container-info-list .location4:hover {
+    background-color: #e5e5e5; }
+    .main-location-container-info-list .location4:hover:before {
+      animation: 0.7s linear 0s infinite alternate location4Anim_tablet; }
+  .main-location-container-info-list .location5:before {
+    top: -121px;
+    left: -671px; }
+  .main-location-container-info-list .location5:hover {
+    background-color: #e5e5e5; }
+    .main-location-container-info-list .location5:hover:before {
+      animation: 0.7s linear 0s infinite alternate location5Anim_tablet; }
+  .main-specialOffer-text {
+    font-size: 22px;
+    line-height: 26px; } }
 
 .footer {
   background: #b90000;
@@ -316,7 +559,8 @@ table {
         font-size: 40px;
         line-height: 50px;
         color: #FFFFFF;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        cursor: default; }
     .footer-helper-content {
       display: flex;
       flex-direction: row; }
@@ -327,7 +571,8 @@ table {
         .footer-helper-content-links-navList-item {
           padding: 0 40px;
           list-style-type: none;
-          margin-bottom: 14px; }
+          margin-bottom: 14px;
+          cursor: default; }
           .footer-helper-content-links-navList-item-link {
             text-decoration: none;
             font-family: Roboto-Light;

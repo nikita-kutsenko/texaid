@@ -23,6 +23,7 @@ $C-BLACK: #0e0e0e;
                 line-height: 50px;
                 color: $C-WHITE;
                 text-transform: uppercase;
+                cursor: default;
             }
         }
 
@@ -40,6 +41,7 @@ $C-BLACK: #0e0e0e;
                         padding: 0 40px;
                         list-style-type: none;
                         margin-bottom: 14px;
+                        cursor: default;
     
                         &-link {
                             text-decoration: none;
@@ -117,4 +119,9 @@ $C-BLACK: #0e0e0e;
             }
         }
     }
+}
+
+// mobile 
+@media only screen and (min-width: 320px) and (max-width: 1023px) {
+
 }

@@ -1,6 +1,9 @@
 $C-WHITE: #FFFFFF;
 $C-RED: #b90000;
 $C-BLACK: #0e0e0e;
+$C-GREY-LIGHT: #f5f5f5;
+$C-GREY-DARK: #e5e5e5;
+
 
 
 .main {
@@ -17,6 +20,7 @@ $C-BLACK: #0e0e0e;
             text-align: center;
             color: $C-RED;
             text-transform: uppercase;
+            cursor: default;
         }
 
         &-container {
@@ -24,7 +28,7 @@ $C-BLACK: #0e0e0e;
 
             &-map {
                 width: 1000px;
-                height: 500px;
+                height: 600px;
                 background-image: url(../img/map.png);
                 background-position: center;
                 background-repeat: no-repeat;
@@ -39,20 +43,145 @@ $C-BLACK: #0e0e0e;
 
                     &-item {
                         display: flex;
+                        position: relative;
                         flex-direction: row;
+                        align-items: center;
+                        background-color: $C-GREY-LIGHT;
+                        border-bottom: 2px solid $C-WHITE;
+                        box-sizing: border-box;
+                        height: 120px;
+                        width: 440px;
 
                         &-metro {
-                            margin: 0 30px 20px;
-                            padding: 6px;
-                            border: 3px solid $C-RED;
-                            border-radius: 50%;
-                            font-family: Roboto-Light;
-                            font-size: 36px;
-                            line-height: 36px;
-                            text-align: center;
-                            color: $C-RED;
-                            text-transform: uppercase;
+                            margin: 0 30px 0 20px;
+                            width: 50px;
+                            height: 50px;
                         }
+
+                        &-text {
+
+                            &-metro {
+                                margin-bottom: 4px;
+                                text-decoration: none;
+                                font-family: Roboto-Light;
+                                font-size: 18px;
+                                line-height: 22px;
+                                color: #0e0e0e;
+                                cursor: default;
+                            }
+
+                            &-address {
+                                margin-bottom: 10px;
+                                max-width: 316px;
+                                text-decoration: none;
+                                font-family: Roboto-Light;
+                                font-size: 18px;
+                                line-height: 22px;
+                                color: #0e0e0e;
+                                cursor: default;
+                            }
+
+                            &-googleMaps {
+                                text-decoration: none;
+                                font-family: Roboto-Light;
+                                font-size: 16px;
+                                line-height: 20px;
+                                color: $C-RED;
+                                cursor: pointer;
+                            }
+                        }
+
+                        .item-withoutMetro {
+                            margin-left: 100px;
+                        }
+
+                        &:before {
+                            position: absolute;
+                            display: block;
+                            content: ' ';
+                            background-image: url('../img/marker.svg');
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            height: 28px;
+                            width: 28px;
+                            z-index: 200;
+                        }
+                    }
+
+                    .location1 {
+                        &:before {
+                            top: 228px;
+                            left: -679px;
+                            z-index: 201;
+                        }
+
+                        &:hover {
+                            background-color: $C-GREY-DARK;
+                            &:before {
+                                animation: 0.7s linear 0s infinite alternate location1Anim;
+                            }
+                        }
+                    }
+                    .location2 {
+                        &:before {
+                            top: 66px;
+                            left: -137px;                        
+                            z-index: 202;
+                        }
+
+                        &:hover {
+                            background-color: $C-GREY-DARK;
+                            &:before {
+                                animation: 0.7s linear 0s infinite alternate location2Anim;
+                            }
+                        }
+                    }
+                    .location3 {
+                        &:before {
+                            top: -60px;
+                            left: -934px;
+                            z-index: 203;
+                        }
+
+                        &:hover {
+                            background-color: $C-GREY-DARK;
+                            &:before {
+                                animation: 0.7s linear 0s infinite alternate location3Anim;
+                            }
+                        }
+                    }
+                    .location4 {
+                        &:before {
+                            top: 36px;
+                            left: -79px;
+                            z-index: 204;
+                        }
+
+                        &:hover {
+                            background-color: $C-GREY-DARK;
+                            &:before {
+                                animation: 0.7s linear 0s infinite alternate location4Anim;
+                            }
+                        }
+                    }
+                    .location5 {
+                        &:before {
+                            top:-155px;
+                            left: -920px;
+                            z-index: 205;
+                        }
+
+                        &:hover {
+                            background-color: $C-GREY-DARK;
+                            &:before {
+                                animation: 0.7s linear 0s infinite alternate location5Anim;
+                            }
+                        }
+                    }
+
+                    .list-lastItem {
+                        border-bottom: 0;
                     }
                 }
             }
@@ -74,6 +203,7 @@ $C-BLACK: #0e0e0e;
             text-align: center;
             color: $C-RED;
             text-transform: uppercase;
+            cursor: default;
         }
 
         &-img {
@@ -89,8 +219,146 @@ $C-BLACK: #0e0e0e;
             line-height: 28px;
             text-align: center;
             color: $C-BLACK;
+            cursor: default;
         }
     }
-
-    
 }
+
+
+// tablet 
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    .main {
+        &-location {
+
+            &-container {
+    
+                &-map {
+                    width: 724px;
+                    height: 430px;
+                }
+    
+                &-info {
+    
+                    &-list {
+    
+                        &-item {
+                            width: 300px;
+                            height: 86px;
+    
+                            &-metro {
+                                margin: 0 20px;
+                                width: 40px;
+                                height: 40px;
+                            }
+    
+                            &-text {
+    
+                                &-metro {
+                                    margin-bottom: 2px;
+                                    font-size: 14px;
+                                    line-height: 16px;
+                                }
+    
+                                &-address {
+                                    margin-bottom: 4px;
+                                    max-width: 204px;
+                                    font-size: 14px;
+                                    line-height: 16px;
+                                }
+    
+                                &-googleMaps {
+                                    font-size: 14px;
+                                    line-height: 16px;
+                                }
+                            }
+
+                            .item-withoutMetro {
+                                margin-left: 80px;
+                            }
+                        }
+
+                        .location1 {
+                            &:before {
+                                top: 158px;
+                                left: -495px;
+                            }
+    
+                            &:hover {
+                                background-color: $C-GREY-DARK;
+                                &:before {
+                                    animation: 0.7s linear 0s infinite alternate location1Anim_tablet;
+                                }
+                            }
+                        }
+                        .location2 {
+                            &:before {
+                                top: 40px;
+                                left: -102px;
+                            }
+    
+                            &:hover {
+                                background-color: $C-GREY-DARK;
+                                &:before {
+                                    animation: 0.7s linear 0s infinite alternate location2Anim_tablet;
+                                }
+                            }
+                        }
+                        .location3 {
+                            &:before {
+                                top:  -53px;
+                                left: -681px;                            
+                            }
+    
+                            &:hover {
+                                background-color: $C-GREY-DARK;
+                                &:before {
+                                    animation: 0.7s linear 0s infinite alternate location3Anim_tablet;
+                                }
+                            }
+                        }
+                        .location4 {
+                            &:before {
+                                top: 20px;
+                                left: -62px;
+                            }
+    
+                            &:hover {
+                                background-color: $C-GREY-DARK;
+                                &:before {
+                                    animation: 0.7s linear 0s infinite alternate location4Anim_tablet;
+                                }
+                            }
+                        }
+                        .location5 {
+                            &:before {
+                                top: -121px;
+                                left: -671px;
+                            }
+    
+                            &:hover {
+                                background-color: $C-GREY-DARK;
+                                &:before {
+                                    animation: 0.7s linear 0s infinite alternate location5Anim_tablet;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        &-specialOffer {
+
+            &-text {
+                font-size: 22px;
+                line-height: 26px;
+            }
+        }
+    }
+}
+
+// // mobile 
+// @media only screen and (min-width: 320px) and (max-width: 1023px) {
+    
+// }
