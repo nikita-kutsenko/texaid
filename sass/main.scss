@@ -212,7 +212,7 @@ $C-GREY-DARK: #e5e5e5;
         }
     
         &-text {
-            width: 800px;
+            max-width: 800px;
             margin-bottom: 20px;
             font-family: Roboto-Regular;
             font-size: 24px;
@@ -358,7 +358,103 @@ $C-GREY-DARK: #e5e5e5;
     }
 }
 
-// // mobile 
-// @media only screen and (min-width: 320px) and (max-width: 1023px) {
+// mobile 
+@media only screen and (min-width: 320px) and (max-width: 1023px) {
+    .main {
+
+        &-location {
+            padding: 80px 0 0;
+            margin-bottom: 0;
     
-// }
+            &-title {
+                margin-bottom: 30px;
+                font-size: 30px;
+                line-height: 36px;
+            }
+    
+            &-container {
+                display: flex;
+    
+                &-map {
+                    display: none;
+                }
+    
+                &-info {
+    
+                    &-list {
+    
+                        &-item {
+                            padding: 0 20px;
+                            height: 120px;
+                            width: 100vw;
+    
+                            &-metro {
+                                margin: 0 20px 0 0;
+                                width: 40px;
+                                height: 40px;
+                            }
+    
+                            &-text {
+    
+                                &-metro {
+                                    margin-bottom: 4px;
+                                    font-size: 16px;
+                                    line-height: 20px;
+                                }
+    
+                                &-address {
+                                    margin-bottom: 10px;
+                                    max-width: 316px;
+                                    font-size: 16px;
+                                    line-height: 20px;
+                                }
+    
+                                &-googleMaps {
+                                    text-decoration: none;
+                                    font-family: Roboto-Light;
+                                    font-size: 14px;
+                                    line-height: 18px;
+                                    color: $C-RED;
+                                    cursor: pointer;
+                                }
+                            }
+    
+                            .item-withoutMetro {
+                                margin-left: 60px;
+                            }
+    
+                            &:before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        &-specialOffer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 80px 20px 0;
+            margin-bottom: 100px;
+    
+            &-title {
+                margin-bottom: 30px;
+                font-size: 30px;
+                line-height: 36px;
+            }
+    
+            &-img {
+                height: auto;
+                max-width: 335px;
+                margin-bottom: 30px;
+            }
+        
+            &-text {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+}
