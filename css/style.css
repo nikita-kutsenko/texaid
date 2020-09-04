@@ -636,7 +636,8 @@ table {
     cursor: default; }
   .main-specialOffer-img {
     height: 250px;
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    border-radius: 30px; }
   .main-specialOffer-text {
     max-width: 800px;
     margin-bottom: 20px;
@@ -764,8 +765,7 @@ table {
     .main-specialOffer-img {
       height: auto;
       max-width: 335px;
-      margin-bottom: 30px;
-      border-radius: 30px; }
+      margin-bottom: 30px; }
     .main-specialOffer-text {
       font-size: 16px;
       line-height: 24px; } }
