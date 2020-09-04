@@ -764,7 +764,8 @@ table {
     .main-specialOffer-img {
       height: auto;
       max-width: 335px;
-      margin-bottom: 30px; }
+      margin-bottom: 30px;
+      border-radius: 30px; }
     .main-specialOffer-text {
       font-size: 16px;
       line-height: 24px; } }
