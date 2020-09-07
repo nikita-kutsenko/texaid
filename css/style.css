@@ -171,6 +171,9 @@ table {
   font-family: Roboto-ThinItalic;
   src: url(../fonts/Roboto/Roboto-ThinItalic.ttf); }
 
+html {
+  scroll-behavior: smooth; }
+
 .container {
   max-width: 1440px;
   margin: 0 auto; }

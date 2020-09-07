@@ -5,7 +5,6 @@ $C-BLACK: #0e0e0e;
 
 .header {
     background: $C-WHITE;
-    // margin-bottom: 40px;
 
     &-helper {
         display: flex;
@@ -17,8 +16,6 @@ $C-BLACK: #0e0e0e;
             background: $C-RED;
             padding: 24px 80px 10px;
             margin-bottom: 60px;
-            // border-bottom-left-radius: 50%;
-            // border-bottom-right-radius: 50%;
 
             &-logo {
                 font-family: Roboto-Bold;
@@ -36,7 +33,6 @@ $C-BLACK: #0e0e0e;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-                // margin-bottom: 60px;
 
                 &-item {
                     padding: 0 40px;
@@ -80,8 +76,6 @@ $C-BLACK: #0e0e0e;
                         cursor: pointer;
 
                         &:hover {
-                            // padding: 0 0 5px;
-                            // border-bottom: 1px solid $C-RED;
                             color: $C-RED;
                         }
                     }
@@ -89,9 +83,7 @@ $C-BLACK: #0e0e0e;
 
                 .lgActive {
                     .header-helper-nav-langList-item-link {
-                        // padding: 0 0 5px;
                         color: $C-RED;
-                        // border-bottom: 1px solid $C-RED;
                     }
                 }
 
@@ -394,10 +386,6 @@ $C-BLACK: #0e0e0e;
                         opacity: 0;
                         transform: rotate(135deg);
                         top: 0;
-                        // top: 20px;
-                        // left: -20px;
-                        // my
-                        // display: none;
                     }
 
                     &-lines,
@@ -407,15 +395,11 @@ $C-BLACK: #0e0e0e;
 
                     &-lines {
                         transform: rotate(135deg);
-                        // my 
-                        // transform: rotate(45deg);
                     }
 
                     &-lines:after {
                         top: 0;
                         transform: rotate(-90deg);
-                        // my
-                        // transform: rotate(-90deg);
                     }
         
                     &:hover {
