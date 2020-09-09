@@ -2,14 +2,24 @@ window.onscroll = function() {scrollFunc()};
 
 var nav = document.getElementById("navID");
 var header = document.getElementById("headerID");
+var hero = document.getElementById("about");
 
-var sticky = nav.offsetTop;
-console.log(sticky);
+var stickyNav = nav.offsetTop;
+var stickyHero = hero.offsetTop;
 
 function scrollFunc() {
-    if (window.pageYOffset >= sticky) {
-        header.classList.add("navDown");
+    if (window.innerWidth >= 1024) {
+        if (window.pageYOffset >= stickyNav) {
+            header.classList.add("navDown");
+        } else {
+            header.classList.remove("navDown");
+        }
     } else {
-        header.classList.remove("navDown");
+        if (window.pageYOffset >= stickyHero) {
+            header.classList.add("navDown");
+        } else {
+            header.classList.remove("navDown");
+        }
     }
+    
 }
